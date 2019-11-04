@@ -238,13 +238,13 @@ def control(pressed_button):
     # Moves astronaut
     global astronaut_x_V, astronaut_y_V, x0, y0
     if pressed_button.keysym == "Up":
-        y0 += -astronaut_x_V
+        y0 += -astronaut_y_V
     elif pressed_button.keysym == "Down":
         y0 += astronaut_y_V
     elif pressed_button.keysym == "Right":
-        x0 += astronaut_y_V
+        x0 += astronaut_x_V
     elif pressed_button.keysym == "Left":
-        x0 += -astronaut_y_V
+        x0 += -astronaut_x_V
     if y0 + 137 < Height / 2:
         y0 = Height / 2 - 137
 
