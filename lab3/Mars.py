@@ -14,7 +14,7 @@ Window.pack()
 # Points for rocket's fire
 points = list()
 
-# Сoordinate for astronaut
+# Сoordinates for astronaut
 x0 = 400
 y0 = 500
 
