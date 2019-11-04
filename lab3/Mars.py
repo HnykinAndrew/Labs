@@ -18,7 +18,7 @@ points = list()
 x0 = 400
 y0 = 500
 
-# Bullets characteristic
+# Bullets characteristics
 bullet_x0 = x0
 bullet_y0 = y0
 bullet_v_x = -3
@@ -28,11 +28,11 @@ bullet_list = list()
 bullet_list_x = list()
 bullet_list_y = list()
 
-# Astronaut characteristic
+# Astronaut characteristics
 astronaut_x_V = 1
 astronaut_y_V = 2
 
-# Rocket characteristic
+# Rocket characteristics
 rocket_S_x = 0
 rocket_S_y = 300
 rocket_V_x = 0
@@ -41,7 +41,7 @@ rocket_V_y = 0
 # Show if rocket launched or not
 launch_ident = 0
 
-# Start menu's characteristic
+# Start menu's characteristics
 Text = "Press any button to start"
 i = 0
 start_ident = 0
