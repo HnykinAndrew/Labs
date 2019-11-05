@@ -183,7 +183,7 @@ def quit(pressed_button):
         for line in file_data:
             results.append(line.split())
         file_data.close()
-    name = input('Write your name:')
+    name = input('Write your name: ')
     results.append([name, score])
     for i in range(0, len(results)-2, 1):
         swap = results[i]
