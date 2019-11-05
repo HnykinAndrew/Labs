@@ -178,13 +178,13 @@ def click(event):
 def quit(pressed_button):
     # Close program
     global score
-    score += 1000
-    new_ball()
     results = list()
     with open("Results.txt", "r") as file_data:
         for line in file_data:
             results.append(line.split())
         file_data.close()
+    name = input('Write your name:')
+    results.append([name, score])
     for i in range(0, len(results)-2, 1):
         swap = results[i]
         for j in range(i+1, len(results)-2, 1):
