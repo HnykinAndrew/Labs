@@ -83,7 +83,7 @@ def new_line():
     v_x = rnd(-4, 4)
     v_y = rnd(-4, 4)
     color = choice(colors)
-    if (ball_ident > 15):
+    if (ball_ident > 11):
         root.after(1000, new_line)
     else:
         line_ident += 1
@@ -182,23 +182,28 @@ def quit(pressed_button):
     with open("Results.txt", "r") as file_data:
         for line in file_data:
             results.append(line.split())
-        file_data.close()
     name = input('Write your name: ')
     results.append([name, score])
-    for i in range(0, len(results)-2, 1):
+    i = 0
+    while i < len(results)-1:
         swap = results[i]
-        for j in range(i+1, len(results)-2, 1):
-            if results[j][1] < swap[1]:
+        j = i
+        while j < len(results):
+            if int(results[j][1]) < int(swap[1]):
+                print(int(results[j][1]), int(swap[1]), i , j)
                 swap = results[j]
                 results[j] = results[i]
                 results[i] = swap
+            j += 1
+        i += 1
+    print(results)
+    print(len(results))
     with open('Results.txt', 'w') as file_data:
-        for i in (0, len(results)-1, 1):
-            file_data.write(str(results[i][0]) + ' ' + str(results[i][1]) + '\n')
-        file_data.close()
-    exit(0)
+        for res in results:
+            file_data.write(str(res[0]) + ' ' + str(res[1]) + '\n')
+        exit(0)
 
-
+file_data = open("Results.txt", "w")
 new_ball()
 new_line()
 move()
