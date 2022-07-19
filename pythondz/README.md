@@ -1,2 +1,0 @@
-# pythondz
-dz po python
